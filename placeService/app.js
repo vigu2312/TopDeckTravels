@@ -11,7 +11,7 @@ app.use('/places', placesRoute);
 
 const coordinateRoute=require('./routes/coordinates');
 
-app.use('/getCoordinate',coordinateRoute);
+app.use('/places/coordinate',coordinateRoute);
 
 mongoose.connect('mongodb://3.88.249.85:27017/TourismCanada' ,
 { useNewUrlParser: true }, 
