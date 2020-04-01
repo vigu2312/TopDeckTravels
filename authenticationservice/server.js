@@ -13,6 +13,6 @@ app.use('/users', require('./users/users.controller'));
 app.use(errorHandler);
 
 // start server
-app.listen(3000,function(){
+app.listen(3001,function(){
 	console.log('Server Started');
 })
