@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/authapi')
+mongoose.connect('mongodb://3.88.249.85/TourismCanada')
 mongoose.Promise = global.Promise;
 
 module.exports = {
