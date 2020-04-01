@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
-const Place=require('../models/Place');
-const Coordinate = require('../models/Coordinate')
+const Place=require('../Models/Place');
+const Coordinate = require('../Models/Coordinate')
 const bodyParser=require('body-parser');
 
 router.post('/getPrices',async(req,res)=>{

@@ -1,12 +1,7 @@
 const express=require('express');
 const router=express.Router();
-const fs = require('fs');
 const Booking=require('../Models/Booking');
-
-
 const bodyParser=require('body-parser');
-
-
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
@@ -15,11 +10,7 @@ var yyyy = today.getFullYear();
 
 today = dd + '-' + mm + '-' + yyyy;
 
-
-
-
 router.post('/getBooking', async(req,res)=>{
-
 fare=parseInt(req.body.fare,10);    
 tax=(0.15)*fare;
 amount=tax+fare;
