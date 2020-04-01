@@ -10,6 +10,10 @@ const cors=require('cors');
 app.use(cors());
 app.use(bodyParser.json());
 
+const paymentRoute = require('./routes/payment');
+
+app.use('/payment',paymentRoute);
+
 const ticketRoute=require('./Routes/booking');
 
 app.use('/booking',ticketRoute);

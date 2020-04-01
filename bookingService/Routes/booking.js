@@ -8,9 +8,9 @@ var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); 
 var yyyy = today.getFullYear();
 
-today = dd + '-' + mm + '-' + yyyy;
+today = yyyy + '-' + mm + '-' + dd;
 
-router.post('/getBooking', async(req,res)=>{
+router.post('/createBooking', async(req,res)=>{
 fare=parseInt(req.body.fare,10);    
 tax=(0.15)*fare;
 amount=tax+fare;
@@ -27,6 +27,14 @@ const booking=new Booking({
     amount:amount
   
 });
+var bookDate=today;
+var travelDate=req.body.travel_date;
+
+if (travelDate<bookDate) {
+   
+    res.send("Travel Date cannot be less then today")
+}
+else{
 try{
    const savedPost= await booking.save()  
     res.json(savedPost);
@@ -36,7 +44,7 @@ catch(error){
     res.json({message:error}); 
 }
 
-
+}
 });
 
 
