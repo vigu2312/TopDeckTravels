@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const placesRoute = require('./routes/places');
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/places', placesRoute);
 
