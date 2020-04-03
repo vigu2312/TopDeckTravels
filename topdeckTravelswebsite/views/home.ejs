@@ -58,11 +58,11 @@
       <a class="navbar-brand" href="#">Topdeck Travels</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.ejs">Home</a></li>
+      <li class="active"><a href="/">Home</a></li>
     </ul>
   <ul class="nav navbar-right">
-    <li id="Login"><a href="login.ejs">Login</a></li>
-    <li id="logout"><a href="home.ejs">Logout</a></li>
+    <li id="Login"><a href="/login">Login</a></li>
+    <li id="logout"><a href="/">Logout</a></li>
   </ul>
   </div>
 </nav>
@@ -123,7 +123,7 @@
 
         var id = resp[i-1].name;
         console.log(id);
-        var myPanel = $('<div class="card card-outline-info" id="'+i+'Panel"><br><div class="card-block"><a href="place.ejs.html?name='+(resp[i-1].name)+'&email='+(email)+'"><input type="image" src='+url+'  onclick=fun('+id+') class="square" width="250" height="200"></a><div class="card-title"><span><br/><h5>'+resp[i-1].name+'</h5></span><button type="button" class="close" data-target="#'+i+'Panel" data-dismiss="alert"><span class="float-right"><i class="fa fa-remove"></i></span></button></div></div></div>');
+        var myPanel = $('<div class="card card-outline-info" id="'+i+'Panel"><br><div class="card-block"><a href="/place?name='+(resp[i-1].name)+'&email='+(email)+'"><input type="image" src='+url+'  onclick=fun('+id+') class="square" width="250" height="200"></a><div class="card-title"><span><br/><h5>'+resp[i-1].name+'</h5></span><button type="button" class="close" data-target="#'+i+'Panel" data-dismiss="alert"><span class="float-right"><i class="fa fa-remove"></i></span></button></div></div></div>');
         myPanel.appendTo(myCol);
         myCol.appendTo('#contentPanel');
     }

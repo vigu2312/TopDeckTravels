@@ -36,6 +36,6 @@ app.get("/ticket", function(req, res){
 	res.render("ticket.ejs")
 });
 
-app.listen(3009,function(){
+app.listen(3000,function(){
 	console.log('Server Started');
 })
