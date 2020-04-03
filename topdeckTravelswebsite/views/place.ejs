@@ -93,11 +93,11 @@
       <a class="navbar-brand" href="#">Topdeck Travels</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.ejs">Home</a></li>
+      <li class="active"><a href="/">Home</a></li>
     </ul>
   <ul class="nav navbar-right">
-    <li id="Login"><a href="login.ejs">Login</a></li>
-    <li id="logout"><a href="home.ejs">Logout</a></li>
+    <li id="Login"><a href="/login">Login</a></li>
+    <li id="logout"><a href="/">Logout</a></li>
   </ul>
   </div>
 </nav>
@@ -179,7 +179,7 @@
         }
         else {
 
-            window.location = "book.ejs?name=" + placeName + "&email=" + email;
+            window.location = "/book?name=" + placeName + "&email=" + email;
         }
 
             });

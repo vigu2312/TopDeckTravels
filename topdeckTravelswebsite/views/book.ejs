@@ -50,10 +50,10 @@
       <a class="navbar-brand" href="#">Topdeck Travels</a>
     </div>
     <ul class="nav navbar-nav">
-      <li id="home"><a href="home.ejs">Home</a></li>
+      <li id="home"><a href="/>Home</a></li>
     </ul>
   <ul class="nav navbar-right">
-    <li id="logout"><a href="home.ejs">Logout</a></li>
+    <li id="logout"><a href="/">Logout</a></li>
   </ul>
   </div>
 </nav>
@@ -234,7 +234,7 @@
              console.log(r);
              var id = r.responseJSON._id;
              console.log(id);
-             window.location.replace("ticket.ejs?id="+id);
+             window.location.replace("/ticket?id="+id);
 
 
          }

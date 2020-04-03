@@ -164,7 +164,7 @@ body {
 <!--              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>-->
 <!--              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>-->
                <div class="container signup">
-                 <p>Don't have an account? <a href="registration.ejs">Register here</a>.</p>
+                 <p>Don't have an account? <a href="/registration">Register here</a>.</p>
             </div>
             </div>
 
@@ -182,7 +182,7 @@ body {
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="verify">Verify</button>
             </div>
 
-              <button onclick=window.location.href="home.ejs"> HOME</button>
+              <button onclick=window.location.href="/"> HOME</button>
 
           </div>
         </div>
@@ -246,7 +246,7 @@ $('#loginbutton').click( function () {
 
 
             if (auth.responseJSON.length!=0) {
-                location.replace("home.ejs?email="+email);
+                location.replace("/?email="+email);
             } else {
                 console.log("inside validate error")
             }

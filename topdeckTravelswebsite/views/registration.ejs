@@ -114,12 +114,12 @@ a {
 
       <hr>
     <button type="button"  id="register">Register</button>
-    <button onclick="window.location.href = 'home.ejs'" class="cancelbtn" >Cancel</button>
+    <button onclick="window.location.href = '/'" class="cancelbtn" >Cancel</button>
       </div>
   </div>
 
   <div class="container signin">
-    <p>Already have an account? <a href="login.ejs">Sign in</a>.</p>
+    <p>Already have an account? <a href="/login">Sign in</a>.</p>
   </div>
 
 
@@ -162,7 +162,7 @@ a {
         console.log(resp.responseJSON);
         var resp = resp.responseJSON;
         if(resp.message == "User registered successfully"){
-            window.location.replace("home.ejs?email="+email);
+            window.location.replace("/?email="+email);
         }
         else{
             document.getElementById("error").innerHTML="Enter Data Correctly";
